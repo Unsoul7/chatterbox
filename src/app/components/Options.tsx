@@ -43,9 +43,13 @@ export default function Options() {
             <div className="footer-btn"><span className="material-symbols-outlined">
                 search
             </span></div>
-            <div className="footer-btn"><span className="material-symbols-outlined">
-                add_circle
-            </span></div>
+            <div className="footer-btn">
+                <Link href={'/uploadpost'} >
+                    <span className="material-symbols-outlined">
+                        add_circle
+                    </span>
+                </Link>
+            </div>
             <div className="footer-btn">
                 <Link href='/profile'>
                     <div className="footer-dp-btn"><img src={`http://localhost:5000/images/${userData.dp}` ? `http://localhost:5000/images/${userData.dp}` : `${userData.dp}`} alt="" /> </div>
