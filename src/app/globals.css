@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.material-symbols-outlined {
+  font-size: 30px !important;
+  color: rgb(223, 46, 46);
+}
+
+.nav{
+  @apply w-full px-2 h-14 flex flex-row items-center justify-between sticky top-0 bg-white;
+}
+
+.footer{
+  @apply flex border-t-2 fixed bottom-0 w-full flex-row justify-evenly items-center py-3 bg-white;
+}
+
+.footer-btns{
+  @apply w-1/4  flex items-center justify-center;
+}
+
+.footer-dp-btn{
+  @apply bg-[url('https://i.pinimg.com/564x/dc/08/0f/dc080fd21b57b382a1b0de17dac1dfe6.jpg')] bg-center bg-cover w-8 h-8 rounded-full overflow-hidden flex items-center justify-center;
+}
+
+.form-fields{
+  @apply w-full h-12 rounded-lg px-6 focus:outline-none border;
+}
+
+.dp-img{
+  @apply w-24 h-24 bg-[url('https://i.pinimg.com/564x/dc/08/0f/dc080fd21b57b382a1b0de17dac1dfe6.jpg')] bg-center bg-cover rounded-full overflow-hidden flex items-center justify-center;
+}
+
+.posts-grid{
+  columns:2 10rem;
+  width:100vw;
+  padding: 15px;
+}
+
+.post-card{
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+
+.post-card img{
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.file-up{
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
 }
